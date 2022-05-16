@@ -16318,6 +16318,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Asignatura\\Index.cshtml",
+      "TargetPath": "Views\\Asignatura\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"

@@ -7,13 +7,13 @@ namespace Escuela_MVC.Models
         public int AnioDeCreacion {get; set;}
         public string Pais { get; set; }
         public string Ciudad { get; set; }
-        private TiposEscuela TipoEscuela { get; set; }
+        public TiposEscuela TipoEscuela { get; set; }
         public List <Curso> Cursos { get; set; }
         public string Direccion { get; set; }
 
         public Escuela ()
         {
-            
+
         }
 
         public Escuela (string nombre,
