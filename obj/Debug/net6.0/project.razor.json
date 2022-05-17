@@ -16308,6 +16308,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Shared\\AsignaturaSimple.cshtml",
+      "TargetPath": "Views\\Shared\\AsignaturaSimple.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16325,6 +16330,11 @@
     {
       "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Asignatura\\MultiAsignatura.cshtml",
+      "TargetPath": "Views\\Asignatura\\MultiAsignatura.cshtml",
       "FileKind": "mvc"
     },
     {
