@@ -1,21 +1,20 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Escuela_MVC.Models;
 using Microsoft.AspNetCore.Mvc;
+using Escuela_MVC.Models;
 
 namespace Escuela_MVC.Controllers
 {
     public class AsignaturaController : Controller
     {
-        public IActionResult index ()
+        public IActionResult Index()
         {
             return View(new Asignatura{Nombre="Programación",
-                                UniqueId= Guid.NewGuid().ToString()}
-                        );
+                                UniqueId= Guid.NewGuid().ToString()
+                            });
         }
-        public IActionResult MultiAsignatura ()
+
+        public IActionResult MultiAsignatura()
         {
             var listaAsignaturas = new List<Asignatura>(){
                             new Asignatura{Nombre="Matemáticas",
@@ -34,7 +33,11 @@ namespace Escuela_MVC.Controllers
                             new Asignatura{Nombre="Programación",
                                 UniqueId= Guid.NewGuid().ToString()
                             }
-            };
+                };
+
+            ViewBag.CosaDinamica = "La Monja";
+            ViewBag.Fecha = DateTime.Now;
+
             return View("MultiAsignatura", listaAsignaturas);
         }
     }

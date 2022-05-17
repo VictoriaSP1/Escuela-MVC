@@ -16298,8 +16298,28 @@
   "RootNamespace": "Escuela_MVC",
   "Documents": [
     {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Shared\\ObjetoEscuelaSimple.cshtml",
+      "TargetPath": "Views\\Shared\\ObjetoEscuelaSimple.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Escuela\\Index.cshtml",
       "TargetPath": "Views\\Escuela\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Shared\\Simple.cshtml",
+      "TargetPath": "Views\\Shared\\Simple.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Alumno\\MultiAlumno.cshtml",
+      "TargetPath": "Views\\Alumno\\MultiAlumno.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Alumno\\Index.cshtml",
+      "TargetPath": "Views\\Alumno\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16325,6 +16345,11 @@
     {
       "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Asignatura\\Index.cshtml",
       "TargetPath": "Views\\Asignatura\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Victoria\\Programation languages\\C#\\M4-ASP.NET-BlueOcean\\4. Curso de ASP.NET Core\\Escuela-MVC\\Views\\Shared\\ListaObjetoEscuela.cshtml",
+      "TargetPath": "Views\\Shared\\ListaObjetoEscuela.cshtml",
       "FileKind": "mvc"
     },
     {
