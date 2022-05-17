@@ -9,17 +9,16 @@ namespace Escuela_MVC.Controllers
 {
     public class EscuelaController : Controller
     {
+        private EscuelaContext _context;
         public IActionResult Index ()
         {
-            var escuela = new Escuela ();
-            escuela.AnioDeCreacion=2005;
-            escuela.UniqueId = Guid.NewGuid().ToString();
-            escuela.Nombre = "Platzi School";
-            escuela.Ciudad = "Bogota";
-            escuela.Pais = "Colombia";
-            escuela.Direccion = "Avenida Siempre Viva";
-            escuela.TipoEscuela = TiposEscuela.Secundaria;
+            var escuela =_context.Escuelas.FirstOrDefault();
             return View(escuela);
+        }
+
+        public EscuelaController (EscuelaContext context)
+        {
+            _context = context;
         }
     }
 }
