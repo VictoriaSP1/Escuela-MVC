@@ -54,7 +54,7 @@ namespace Escuela_MVC
 
         app.UseEndpoints(endpoints =>
         {
-            endpoints.MapControllerRoute("default", "{controller=Escuela}/{action=Index}");
+            endpoints.MapControllerRoute("default", "{controller=Escuela}/{action=Index}/{id?}");
         });
 
             /*app.UseMvc(routes =>

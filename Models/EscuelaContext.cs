@@ -40,6 +40,9 @@ namespace Escuela_MVC.Models
             //x cada curso cargar alumnos
             var alumnos = CargarAlumnos(cursos);
 
+            //x cargar evaluaciones
+            var evaluaciones = CargarEvaluaciones(cursos, asignaturas, alumnos);
+
             modelBuilder.Entity<Escuela>().HasData(escuela);
             modelBuilder.Entity<Curso>().HasData(cursos.ToArray());
             modelBuilder.Entity<Asignatura>().HasData(asignaturas.ToArray());
@@ -118,5 +121,41 @@ namespace Escuela_MVC.Models
 
             return listaAlumnos.OrderBy((al) => al.Id).Take(cantidad).ToList();
         }
+
+        private List<Evaluacion> CargarEvaluaciones(List<Curso> cursos, List<Asignatura> asignaturas, List<Alumno> alumnos, int numeroEvaluaciones = 5)
+        {
+            Random rnd = new Random();
+            var listaEv = new List<Evaluacion>();
+            foreach (var curso in cursos)
+            {
+                foreach (var asignatura in asignaturas)
+                {
+                    foreach (var alumno in alumnos)
+                    {
+                        for (int i = 0; i < numeroEvaluaciones; i++)
+                        {
+                            int cantRandom = rnd.Next(0, 500);
+                            var tmp = new List<Evaluacion> 
+                            {
+                                new Evaluacion 
+                                { 
+                                    Id = Guid.NewGuid().ToString(),
+                                    Nombre = "Evaluación de " + asignatura.Nombre + " # " + (i + 1),
+                                    AlumnoId = alumno.Id,
+                                    Alumno = alumno,
+                                    AsignaturaId = asignatura.Id,
+                                    Asignatura = asignatura,
+                                    Nota = (float)cantRandom/100
+                                }
+                            };
+                            listaEv.AddRange(tmp);
+                        }
+                    }
+                }
+            }
+
+            return listaEv;
+        }
+
     }
 }
