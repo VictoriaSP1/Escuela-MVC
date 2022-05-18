@@ -26,25 +26,13 @@ namespace Escuela_MVC
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.AddDbContext<EscuelaContext>(
-                options => options.UseInMemoryDatabase(databaseName:"testDB" )
-            );
-
-            
+            services.AddControllersWithViews();
+            services.AddDbContext<EscuelaContext>(options => 		 
+            options.UseInMemoryDatabase(databaseName: "Escuela"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        /*public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -60,12 +48,21 @@ namespace Escuela_MVC
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc(routes =>
+            app.UseStaticFiles();
+        app.UseRouting();
+        app.UseCors();
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllerRoute("default", "{controller=Escuela}/{action=Index}");
+        });
+
+            /*app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Escuela}/{action=Index}/{id?}");
-            });
-        }*/
+            });*/
+        }
     }
 }

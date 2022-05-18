@@ -12,6 +12,7 @@ namespace Escuela_MVC.Controllers
         private EscuelaContext _context;
         public IActionResult Index ()
         {
+            ViewBag.CosaDinamica = "La Monja";
             var escuela =_context.Escuelas.FirstOrDefault();
             return View(escuela);
         }

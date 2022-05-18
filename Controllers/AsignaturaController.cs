@@ -10,22 +10,20 @@ namespace Escuela_MVC.Controllers
         private EscuelaContext _context;
 
         public AsignaturaController(EscuelaContext context)
-            {
-                    _context = context;
-            }
+        {
+            _context = context;
+        }
 
         public IActionResult Index()
         {
-            return View(new Asignatura{Nombre="Programación",
-                                Id= Guid.NewGuid().ToString()
-                            });
+            return View(_context.Asignaturas.FirstOrDefault() );
         }
 
         public IActionResult MultiAsignatura()
         {            
-            var StudentList = _context.Alumnos.ToList();
+            ViewBag.CosaDinamica = "La Monja";
             ViewBag.Time = DateTime.Now;
-            return View(StudentList);
+            return View("MultiAsignatura", _context.Asignaturas);
         }
     }
 }

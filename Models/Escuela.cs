@@ -23,7 +23,8 @@ namespace Escuela_MVC.Models
 
         public Escuela (string nombre, int anio, 
                         TiposEscuela tipo, 
-                        string pais="", string ciudad = "")
+                        string pais="", 
+                        string ciudad = "") : base()
         {
             (Nombre, AnioDeCreacion) = (nombre, anio);
             this.Pais = pais;
