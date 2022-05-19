@@ -31,6 +31,35 @@ namespace Escuela_MVC.Controllers
 
             return View("MultiAlumno", _context.Cursos);
         }
+
+        public IActionResult Create()
+        {
+            ViewBag.Fecha = DateTime.Now;
+
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Curso curso)
+        {
+            ViewBag.Fecha = DateTime.Now;
+            if (ModelState.IsValid)
+            {
+                var escuela = _context.Escuelas.FirstOrDefault();
+
+                curso.EscuelaId = escuela.Id;
+                _context.Cursos.Add(curso);
+                _context.SaveChanges();
+                ViewBag.MensajeExra ="Curso Creado";
+                return View("Index", curso);
+            }
+            else
+            {
+                return View(curso);
+            }
+            
+        }
+
         
         private EscuelaContext _context;
         public CursoController(EscuelaContext context)

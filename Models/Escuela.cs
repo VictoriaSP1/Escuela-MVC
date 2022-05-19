@@ -9,7 +9,6 @@ namespace Escuela_MVC.Models
         public string Ciudad { get; set; }
         public TiposEscuela TipoEscuela { get; set; }
         public List <Curso> Cursos { get; set; }
-        public string Direccion { get; set; }
 
         public Escuela ()
         {

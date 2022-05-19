@@ -28,7 +28,7 @@ namespace Escuela_MVC
         {
             services.AddControllersWithViews();
             services.AddDbContext<EscuelaContext>(options => 		 
-            options.UseInMemoryDatabase(databaseName: "Escuela"));
+            options.UseInMemoryDatabase(databaseName: "testDB"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,12 +45,11 @@ namespace Escuela_MVC
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
             app.UseCookiePolicy();
 
             app.UseStaticFiles();
-        app.UseRouting();
-        app.UseCors();
+            app.UseRouting();
+            app.UseCors();
 
         app.UseEndpoints(endpoints =>
         {

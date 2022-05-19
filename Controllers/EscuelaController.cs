@@ -8,8 +8,9 @@ namespace Escuela_MVC.Controllers
     public class EscuelaController : Controller
     {
         
-        public IActionResult Index()
+        public IActionResult Index(string id)
         {
+            
             ViewBag.CosaDinamica = "La Monja";
             var escuela = _context.Escuelas.FirstOrDefault();
             return View(escuela);

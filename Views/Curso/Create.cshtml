@@ -1,0 +1,28 @@
+﻿@model Curso
+
+@{
+    ViewData["Title"] = "Creación de Curso";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="POST">
+    <div>
+        <label asp-for="Nombre"></label>    
+        <input  asp-for="Nombre"/>
+    </div>
+    <div>
+        <label asp-for="Jornada"></label>
+        
+        @Html.DropDownList(
+            "Jornada", Html.GetEnumSelectList<TiposJornada>(),
+            "Seleccione Jornada",
+            new {@class = "form-control"}
+        )
+    </div>
+    <input type="submit"/>
+</form>
+
+
+<p><i>@ViewBag.Fecha</i></p>

@@ -28,7 +28,7 @@ namespace Escuela_MVC.Models
             escuela.Nombre = "Platzi School";
             escuela.Ciudad = "Bogota";
             escuela.Pais = "Colombia";
-            escuela.Direccion = "Avd Siempre viva";
+            //escuela.Direccion = "Avd Siempre viva";
             escuela.TipoEscuela = TiposEscuela.Secundaria;
 
             //Cargar Cursos de la escuela
