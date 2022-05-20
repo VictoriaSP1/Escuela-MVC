@@ -10,10 +10,7 @@ namespace Escuela_MVC.Models
         public TiposEscuela TipoEscuela { get; set; }
         public List <Curso> Cursos { get; set; }
 
-        public Escuela ()
-        {
-
-        }
+        public Escuela (){        }
 
         public Escuela (string nombre,
                         int anio) => 
@@ -32,7 +29,8 @@ namespace Escuela_MVC.Models
 
         public override string ToString ()
         {
-            return $"Nombre: \"{Nombre}\", Tipo: \"{TipoEscuela}\" \n Pais: \"{Pais}\", Ciudad: \"{Ciudad}\"";
+            return $"Nombre: \"{Nombre}\", Tipo: \"{TipoEscuela}\""+
+            "\n Pais: \"{Pais}\", Ciudad: \"{Ciudad}\"";
         }
     }
 }
